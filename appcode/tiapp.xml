@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <property name="acs-oauth-key-production" type="string">VS9mPxrnBTLqrzERqHwgQ9pkRxo5ZKC0</property>
-    <property name="acs-oauth-secret-production" type="string">vK4a1Yn8IIgchMQNwHpdyQMEuAAUhNzu</property>
-    <property name="acs-api-key-production" type="string">jsMQK1xoqtUSbqh0nCuz1B93RI0rX2q9</property>
-    <property name="acs-oauth-key-development" type="string">J1JMITzhC3TQjibrtIKVyQlamRUzEvIo</property>
-    <property name="acs-oauth-secret-development" type="string">tzKgQ36nR0kNO5p1E5ICNnLSfdkFvrUH</property>
-    <property name="acs-api-key-development" type="string">Mkyer4r6xsdhkfuYXcz1Hg4qlARHLCMo</property>
+    <property name="acs-oauth-key-production" type="string">GLpL1SDX2Sch0E19RMOf1JDsATNfKyk8</property>
+    <property name="acs-oauth-secret-production" type="string">wz6C7YqcCrg3TNXDCGhfv669XpipKkpA</property>
+    <property name="acs-api-key-production" type="string">Ym4xlQjCj2RicJdhKXtZvzAFsf7tfG11</property>
+    <property name="acs-oauth-key-development" type="string">OFeJitayMdVfAh9WxJYruxVRzGYQbMda</property>
+    <property name="acs-oauth-secret-development" type="string">00s98XNMDssuBjcRLXm8NGAPQQaNrqoL</property>
+    <property name="acs-api-key-development" type="string">wEzQxKhTPjcomQv8MMqHNFj3EAnz5LUS</property>
     <deployment-targets>
         <target device="mobileweb">false</target>
         <target device="iphone">true</target>

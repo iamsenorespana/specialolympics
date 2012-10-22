@@ -7,7 +7,7 @@ var PropertyCache = nrequire('/lib/property_cache'),
 PropertyCache.setup({cache_time: 600000});
 
 // Generic Admin user on ACS for making destructive calls with.  Create on ACS you haven't.
-ACS_ADMIN_CREDENTIALS = {login: 'jspain@appcelerator.com', password: 'admin'};//{login: 'appcharity', password: '123456'};
+ACS_ADMIN_CREDENTIALS = {login: 'jamil', password: 'spain'};//{login: 'appcharity', password: '123456'};
 
 // FB SETUP
 Ti.Facebook.appid = "454480297929219";

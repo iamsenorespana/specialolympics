@@ -13,6 +13,7 @@ module.exports = (function() {
       
       _logInAsGenercAdminToMakeDestructiveCall = function(callback) {
         Cloud.Users.login(ACS_ADMIN_CREDENTIALS, function(e) {
+        
           e.success ? callback(e) : alert("couldn't connect to cloud");
           Ti.App.fireEvent('hide_activity');
         });
@@ -111,11 +112,11 @@ module.exports = (function() {
         if(isIPad) needed_vals.push('topbar_message');
         if(_isDone()) return callback(Cache);
         
-        _logInAsGenercAdminToMakeDestructiveCall(function() {
-          needed_vals.map(function(name){
-            _getKeyVal(name, _cacheValue);
-          });
-        });
+        // _logInAsGenercAdminToMakeDestructiveCall(function() {
+          // needed_vals.map(function(name){
+            // _getKeyVal(name, _cacheValue);
+          // });
+        // });
       };
   
   return {cacheHasExpired: cacheHasExpired,
