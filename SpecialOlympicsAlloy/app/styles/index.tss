@@ -22,15 +22,27 @@
 	title :"Photos",
 	icon: "images/icons/tab_photo.png"
 },
-"#photosWin":{
-	title: 'Photos'
+"#winAboutUS" : {
+	backgroundColor : "white"
 },
-"#newsWin":{
-	title: 'News'
+"#vA" : {
+	top : 0,
+	height : 130,
+	width : 90,
+	left: 0,
+	backgroundImage : "images/icons/menuCartN.png"
 },
-"#eventWin":{
-	title: 'Events'
+"#vF" : {
+	top : 130,
+	height : 130,
+	width : 90,
+	left: 0,
+	backgroundImage : "images/icons/menuSettingsN.png"
 },
-"#aboutWin":{
-	title: 'About Us'
+"#vM" : {
+	top : 250,
+	height : 130,
+	width : 90,
+	left: 0,
+	backgroundImage : "images/icons/menuStatusN.png"
 }
