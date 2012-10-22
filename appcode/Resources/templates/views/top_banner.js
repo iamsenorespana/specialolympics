@@ -32,13 +32,22 @@ var render = function() {
           backgroundSelectedImage: '/images/buttons/donate_button_p.png',
           width: 83,
           height: 38,
+          top: 11,
+          right: "5%"
+        }),
+        list_button: UI.createButton({
+          backgroundImage: '/images/buttons/donate_button.png',
+          backgroundSelectedImage: '/images/buttons/donate_button_p.png',
+          width: 83,
+          height: 38,
+          bottom: 10,
           right: "5%"
         })
       };
  
   self.view.add(self.logo);
   self.view.add(self.donate_button);
-
+  self.view.add(self.list_button);
   if(isIPad) { self.view.add(self.title_message); }
   
   Controller(self);

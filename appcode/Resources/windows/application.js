@@ -1,6 +1,7 @@
 module.exports = (function() {
   var newsWin = nrequire('/windows/news'),
       aboutWin = nrequire('/windows/about'),
+      videosWin = nrequire('/windows/videos'),
       eventsWin = nrequire('/windows/events'),
       photoGalleryWin = nrequire('/windows/photo_gallery'),
       Spinner = nrequire('/ui/spinner');
@@ -9,7 +10,7 @@ module.exports = (function() {
         tab_group: Ti.UI.createTabGroup({}),
       
         events: UI.createTab({
-          title: 'Events',
+          title: 'Locations',
           icon:'/images/icons/tab_cal.png',
           window: eventsWin().win
         }),
@@ -32,6 +33,12 @@ module.exports = (function() {
           window: aboutWin().win
         }),
 
+        video: UI.createTab({
+          title: 'Videos',
+          icon:'/images/icons/tab_video.png',
+          window: videosWin().win
+        }),
+        
         spinner: Spinner()
       };
 	
@@ -42,6 +49,7 @@ module.exports = (function() {
 		self.tab_group.addTab(self.events);
 		self.tab_group.addTab(self.news);
 		self.tab_group.addTab(self.photos);
+		self.tab_group.addTab(self.video);
 		self.tab_group.add(self.spinner);
 		self.tab_group.open();
 	};
