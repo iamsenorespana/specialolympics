@@ -11,7 +11,7 @@ var render = function() {
         }),
     
         title_message: UI.createLabel({
-          text: '"Doctors Without Borders/Médecins Sans Frontières (MSF) is a medical humanitarian organization assisting people in nearly 70 countries."',
+          text: "Special Olympics transforms athletes’ lives through the joy of sport. Help us make a difference.",
           top: 25,
           font: {fontWeight: 'normal', fontFamily: 'Georgia', fontSize: 15, fontStyle: 'italic'},
           color: "#707070",
