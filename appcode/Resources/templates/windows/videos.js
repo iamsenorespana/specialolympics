@@ -19,6 +19,7 @@ var render = function() {
 		      				//leftImage: data.feed.entry[i].media$group.media$thumbnail[0].url,
 		      			//	title: data.feed.entry[i].title.$t,
 		      				height: 60,
+		      				hasChild: true,
 		      				weblink: data.feed.entry[i].link[0].href		      				
 		      			});
 		      				row.add( Ti.UI.createImageView({
