@@ -1,0 +1,7 @@
+{
+    "description": "Flickr API",
+    "directories": {},
+    "main": "ti.flickr",
+    "name": "ti.flickr",
+    "version": "1.0.0"
+}

@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+description: Flickr API
+author: GlobalLogic
+license: Apache 2.0 Licence
+copyright: Copyright (c) 2012
+
+
+# these should not be edited
+name: ti.flickr
+moduleid: ti.flickr
+guid: d2b00e93-43a2-4422-9c70-ishb7att8533
+platform: commonjs
+minsdk: 2.1.1
