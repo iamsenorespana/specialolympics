@@ -1,5 +1,24 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
-	</Window>
+	<TabGroup>
+		<Tab>
+			<Window>
+				
+			</Window>
+		</Tab>
+		<Tab>
+			<Window>
+				
+			</Window>
+		</Tab>
+		<Tab>
+			<Window>
+				
+			</Window>
+		</Tab>
+		<Tab>
+			<Window>
+				
+			</Window>
+		</Tab>
+	</TabGroup>
 </Alloy>
