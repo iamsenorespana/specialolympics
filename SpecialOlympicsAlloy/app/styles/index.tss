@@ -21,4 +21,16 @@
 "#tabPhotos" : {
 	title :"Photos",
 	icon: "images/icons/tab_photo.png"
+},
+"#photosWin":{
+	title: 'Photos'
+},
+"#newsWin":{
+	title: 'News'
+},
+"#eventWin":{
+	title: 'Events'
+},
+"#aboutWin":{
+	title: 'About Us'
 }
