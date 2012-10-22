@@ -17,7 +17,7 @@ Flickr.getPublicPhotos=function(params, onSuccess, onError){
 	url=url+"&method=flickr.people.getPublicPhotos";
 	url=url+"&api_key="+ sessionOBJ.accessKeyId;
 	url=url+"&secret="+sessionOBJ.secretKey;
-	url=url+"&per_page=15";
+	url=url+"&per_page="+params.perPage;
 	url=url+"&jsoncallback=cb";
 	url=url+"&user_id="+params.userId;
 	
