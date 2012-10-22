@@ -38,9 +38,10 @@ Flickr.getPublicPhotos=function(params, onSuccess, onError){
 	     			var photoUrl='http://farm'+photo.farm;
 	     			photoUrl=photoUrl+".staticflickr.com/"+photo.server;
 	     			photoUrl=photoUrl+"/"+photo.id;
-	     			photoUrl=photoUrl+"_"+photo.secret+".jpg";
+	     			photoUrl=photoUrl+"_"+photo.secret;
 
-	     			picStream.photos.photo[c].url=photoUrl;
+	     			picStream.photos.photo[c].url=photoUrl+"_z.jpg";
+	     			picStream.photos.photo[c].url_tn=photoUrl+"_m.jpg";
 	     		}
 	     		onSuccess(picStream.photos);
 	     	}
