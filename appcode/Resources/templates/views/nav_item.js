@@ -12,9 +12,10 @@ render = function(page, left, idx, width) {
         }),
 
         title_view: UI.createView({
-          backgroundColor: "red",
-          bottom:2,
-          width: 120,
+          backgroundColor: "#000",
+          bottom:0,
+          width: (isIPad )? Ti.UI.FILL : 120,
+          opacity: 0.50,
           height: Ti.UI.SIZE,
           page: page,
           idx: idx
@@ -23,7 +24,7 @@ render = function(page, left, idx, width) {
         title: UI.createLabel({
           text: page.title,
           top: 5,
-          color: "black",
+          color: "#fff",
           font: {fontWeight: 'normal'},
           bottom: 5,
           left: 15,
