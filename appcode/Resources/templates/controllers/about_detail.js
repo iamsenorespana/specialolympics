@@ -2,9 +2,9 @@ module.exports = function(view) {
   var FbGraph = nrequire('/lib/fb_graph'),
       Twitter = nrequire('/lib/twitter');
       
-  var TWEET_MSG = "I like @MSF_USA",
+  var TWEET_MSG = "I like @SpecialOlympics",
       FB_MSG = "I like this page!",
-      FB_LINK = 'http://www.facebook.com/msf.english',
+      FB_LINK = 'http://www.facebook.com/SpecialOlympics',
   
       tweet = function() {
         Twitter.tweet(TWEET_MSG, function(e){
