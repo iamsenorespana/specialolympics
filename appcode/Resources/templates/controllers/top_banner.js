@@ -1,7 +1,7 @@
 module.exports = function(view) {
   var Repo = nrequire('/lib/repo');
       
-  var url = 'http://www.doctorswithoutborders.com/',
+  var url = 'https://secure.specialolympics.org/site/c.mlIYIjNZJuE/b.7885525/k.922D/Mobile_Donation/apps/ka/sd/donorcustom.asp',
   
       openDonateLink = function() {
         Ti.Platform.openURL(url);
@@ -19,8 +19,8 @@ module.exports = function(view) {
       pullAcsInfo = function() {
         Repo.getTopBarMessageAndLogoAndDonateUrl(function(e){
           updateTopbarMessage(e.topbar_message);
-          updateLogo(e.logo_url);
-          url = e.donate_url;
+          updateLogo(url); //e.logo_url
+          url = url; //e.donate_url;
         });
       };
 
