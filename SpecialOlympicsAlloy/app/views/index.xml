@@ -2,16 +2,20 @@
 	<TabGroup>
 		<Tab id="tabAboutUS">
 			<Window id="winAboutUS">
-
-				<View id="vA">
-					<Label id="lblA" text="About US" />
+				<View id="vMenu">
+					<View id="vA" onClick="fnAboutUS">
+						<Label id="lblA" text="About US" />
+					</View>
+					<View id="vF" onClick="fnFounders">
+						<Label id="lblF" text="Founder & Leaders" />
+					</View>
+					<View id="vM" onClick="fnMission">
+						<Label id="lblM" text="Our Mission" />
+					</View>
 				</View>
-				<View id="vF">
-					<Label id="lblF" text="Founder & Leaders" />
-				</View>
-				<View id="vM">
-					<Label id="lblM" text="Our Mission" />
-
+				<View id="vRightContainer">
+				
+					
 				</View>
 			</Window>
 		</Tab>
