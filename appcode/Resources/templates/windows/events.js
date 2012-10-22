@@ -1,4 +1,5 @@
 var render = function() {
+ 
   var topBanner = nrequire('/templates/views/top_banner'),
       Controller = nrequire('/templates/controllers/events'),
       http = nrequire('/lib/http.mod'),
@@ -47,6 +48,9 @@ var render = function() {
   
   Controller(self);
   return self;
+ 
 };
 
-module.exports = {render: render};
+module.exports = {
+	render : render
+};
