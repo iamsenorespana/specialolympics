@@ -2,9 +2,14 @@ module.exports = function(view) {
   var Repo = nrequire('/lib/repo');
       
   var url = 'https://secure.specialolympics.org/site/c.mlIYIjNZJuE/b.7885525/k.922D/Mobile_Donation/apps/ka/sd/donorcustom.asp',
-  
+     mUrl = 'http://www.specialolympics.org/newsletter.aspx',
+     
       openDonateLink = function() {
         Ti.Platform.openURL(url);
+      },
+      
+      openMailingListLink = function(){
+      	Ti.Platform.openURL( mUrl );
       },
   
       updateTopbarMessage = function(val) {
@@ -26,5 +31,6 @@ module.exports = function(view) {
       };
 
   view.donate_button.addEventListener('click', openDonateLink);
+  view.list_button.addEventListener('click', openMailingListLink );
   pullAcsInfo();
 };
