@@ -1,8 +1,53 @@
 var render = function() {
   var topBanner = nrequire('/templates/views/top_banner'),
-      Controller = nrequire('/templates/controllers/events'),
+      Controller = nrequire('/templates/controllers/videos'),
       http = nrequire('/lib/http.mod'),
       BorderShadows = nrequire('/ui/border_shadows');
+
+ function setYoutubeData(_cb){
+ 	console.log('Set Youtube Link');
+ 	var http = nrequire('/lib/http.mod');
+ 		        http.sendRequest({
+		      	method: 'GET',
+		      	// server: 'https://gdata.youtube.com/feeds/api/users/SpecialOlympicsHQ/',  
+		      	server: 'http://gdata.youtube.com/feeds/api/playlists/',
+		      	url: 'PL4803CCBCABF8A993?v=2&alt=json', //'uploads?v=2&alt=json',
+		      	success: function(data){
+		      		var tableData = [];
+		      		for( var i=0;i<data.feed.entry.length;i++ ){
+		      			var row = Ti.UI.createTableViewRow({
+		      				//leftImage: data.feed.entry[i].media$group.media$thumbnail[0].url,
+		      			//	title: data.feed.entry[i].title.$t,
+		      				height: 90,
+		      				hasChild: true,
+		      				weblink: data.feed.entry[i].link[0].href		      				
+		      			});
+		      				row.add( Ti.UI.createImageView({
+		      					height:90, width: 120, image:data.feed.entry[i].media$group.media$thumbnail[0].url,
+		      					top: 0, left: 0
+		      				}));
+		      				
+		      				row.add(Ti.UI.createLabel({
+		      					text: data.feed.entry[i].title.$t,
+		      					left: 135,
+		      					top: 5, width: Ti.UI.FILL, height: Ti.UI.FILL,
+		      					font:{
+		      						fontSize: 24
+		      					}
+		      				}));
+		      			tableData.push(row);
+		      		}
+		      		//alert( JSON.stringify(data.feed.entry.length) );
+		      		//view.table.setData( tableData );
+		      		_cb(tableData);
+		      		//console.log( JSON.stringify( tableData ) );
+		      	},
+		      	error: function(data){
+		      		
+		      	}
+		      });	
+ };
+
   
   var self = {
         win: UI.createWindow({
@@ -23,7 +68,10 @@ var render = function() {
       };
       
 
-    
+ 	setYoutubeData( function(data){
+		console.log('got data callback' + JSON.stringify(data));
+		self.table.setData( data );
+	});   
       
   self.win.add(self.donate_banner);
   self.win.add(self.shadow);

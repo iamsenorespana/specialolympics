@@ -1,7 +1,7 @@
 module.exports = function(view) {
   var EventRow = nrequire('/templates/views/event_row'),
  	  http = nrequire('/lib/http.mod'),
-      Detail = isIPad ? nrequire('/templates/views/event_detail') : nrequire('/templates/windows/video_detail'),
+      Detail = isIPad ? nrequire('/templates/windows/video_detail') : nrequire('/templates/windows/video_detail'),
       PullToRefresh = nrequire('/ui/pull_to_refresh'),
       Repo = nrequire('/lib/repo');
   
@@ -30,8 +30,9 @@ module.exports = function(view) {
       openDetail = function(e) {
         var detail = Detail.render(e.row);
         if(isIPad) {
-          view.split_view.detailView.children.map(function(c){ view.split_view.detailView.remove(c);});
-          view.split_view.detailView.add(detail.view);
+          // view.split_view.detailView.children.map(function(c){ view.split_view.detailView.remove(c);});
+          // view.split_view.detailView.add(detail.view);
+          Application.video.open(detail.win);
         } else {
           Application.video.open(detail.win);
         }
