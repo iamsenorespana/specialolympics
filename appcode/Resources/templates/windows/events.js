@@ -1,6 +1,7 @@
 var render = function() {
   var topBanner = nrequire('/templates/views/top_banner'),
       Controller = nrequire('/templates/controllers/events'),
+      http = nrequire('/lib/http.mod'),
       BorderShadows = nrequire('/ui/border_shadows');
   
   var self = {
@@ -20,6 +21,9 @@ var render = function() {
           style_id: 'list_table'
         })
       };
+      
+
+    
       
   self.win.add(self.donate_banner);
   self.win.add(self.shadow);
