@@ -12,8 +12,8 @@ render = function(page, left, idx, width) {
         }),
 
         title_view: UI.createView({
-          backgroundColor: "white",
-          bottom:24,
+          backgroundColor: "red",
+          bottom:2,
           width: 120,
           height: Ti.UI.SIZE,
           page: page,
@@ -26,7 +26,7 @@ render = function(page, left, idx, width) {
           color: "black",
           font: {fontWeight: 'normal'},
           bottom: 5,
-          left: 5,
+          left: 15,
           right: 5,
           width: 120,
           height: Ti.UI.SIZE,
@@ -61,7 +61,7 @@ render = function(page, left, idx, width) {
   self.view.add(self.scroll);
   self.view.add(self.mask);
   self.title_view.add(self.title);
-  self.title_view.transform = Ti.UI.create2DMatrix().rotate(90);
+  self.title_view.transform = Ti.UI.create2DMatrix().rotate(0);
   self.view.add(self.title_view);
   self.view.mask = self.mask; // for accessor in spec
   

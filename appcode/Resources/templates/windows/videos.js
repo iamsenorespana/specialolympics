@@ -11,16 +11,30 @@ var render = function() {
 		      	method: 'GET',
 		      	// server: 'https://gdata.youtube.com/feeds/api/users/SpecialOlympicsHQ/',  
 		      	server: 'http://gdata.youtube.com/feeds/api/playlists/',
-		      	url: 'B2A4E1367126848D?v=2&alt=json', //'uploads?v=2&alt=json',
+		      	url: 'PL4803CCBCABF8A993?v=2&alt=json', //'uploads?v=2&alt=json',
 		      	success: function(data){
 		      		var tableData = [];
 		      		for( var i=0;i<data.feed.entry.length;i++ ){
-		      			tableData.push({
-		      				leftImage: data.feed.entry[i].media$group.media$thumbnail[0].url,
-		      				title: data.feed.entry[i].title.$t,
-		      				height: 90,
-		      				weblink: data.feed.entry[i].link[0].href
+		      			var row = Ti.UI.createTableViewRow({
+		      				//leftImage: data.feed.entry[i].media$group.media$thumbnail[0].url,
+		      			//	title: data.feed.entry[i].title.$t,
+		      				height: 60,
+		      				weblink: data.feed.entry[i].link[0].href		      				
 		      			});
+		      				row.add( Ti.UI.createImageView({
+		      					height:60, width: 90, image:data.feed.entry[i].media$group.media$thumbnail[0].url,
+		      					top: 0, left: 0
+		      				}));
+		      				
+		      				row.add(Ti.UI.createLabel({
+		      					text: data.feed.entry[i].title.$t,
+		      					left: 95,
+		      					top: 5, width: 160, height: Ti.UI.FILL,
+		      					font:{
+		      						fontSize: 14
+		      					}
+		      				}));
+		      			tableData.push(row);
 		      		}
 		      		//alert( JSON.stringify(data.feed.entry.length) );
 		      		//view.table.setData( tableData );
@@ -62,7 +76,7 @@ var render = function() {
   self.win.add(self.shadow);
   self.win.add(self.table);
   
- // Controller(self);
+ Controller(self);
   return self;
 };
 
