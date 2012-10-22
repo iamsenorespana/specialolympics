@@ -20,10 +20,10 @@ module.exports = function(view) {
         return !(view.table.data && view.table.data[0]);
       },
 
-      populatePage = function() {
-        if(Repo.cacheHasExpired('events') || hasntRenderedPage()) { Repo.getEvents(fillTable); }
-      },
-      
+      // populatePage = function() {
+        // if(Repo.cacheHasExpired('events') || hasntRenderedPage()) { Repo.getEvents(fillTable); }
+      // },
+//       
       openDetail = function(e) {
         var detail = Detail.render(e.row.event);
         if(isIPad) {
@@ -33,8 +33,10 @@ module.exports = function(view) {
           Application.events.open(detail.win);
         }
       };
-  
-  view.win.addEventListener('focus', populatePage);
+ 
+
+       
+  //view.win.addEventListener('focus', populatePage);
   view.table.addEventListener('click', openDetail);
   
   if(!isAndroid) { PullToRefresh(view.table, refreshEvents); }

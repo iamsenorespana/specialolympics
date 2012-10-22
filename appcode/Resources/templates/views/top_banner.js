@@ -36,8 +36,8 @@ var render = function() {
           right: "5%"
         }),
         list_button: UI.createButton({
-          backgroundImage: '/images/buttons/donate_button.png',
-          backgroundSelectedImage: '/images/buttons/donate_button_p.png',
+          backgroundImage: '/images/buttons/join_list_button.png',
+          backgroundSelectedImage: '/images/buttons/join_list_button_p.png',
           width: 83,
           height: 38,
           bottom: 10,

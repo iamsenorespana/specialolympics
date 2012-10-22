@@ -34,28 +34,7 @@ module.exports = function(view) {
         }
       };
   
-        // http.sendRequest({
-      	// method: 'GET',
-      	// // server: 'https://gdata.youtube.com/feeds/api/users/SpecialOlympicsHQ/',  
-      	// server: 'http://gdata.youtube.com/feeds/api/playlists/',
-      	// url: 'B2A4E1367126848D?v=2&alt=json', //'uploads?v=2&alt=json',
-      	// success: function(data){
-      		// var tableData = [];
-      		// for( var i=0;i<data.feed.entry.length;i++){
-      			// tableData.push({
-      				// leftImage: data.feed.entry[i].media$group.media$thumbnail[0].url,
-      				// title: data.feed.entry[i].title,
-      				// weblink: data.feed.entry[i].link[0].href
-      			// });
-      		// }
-      		// //alert( JSON.stringify(data.feed.entry.length) );
-      		// view.table.setData( tableData );
-      		// alert( JSON.stringify( tableData ) );
-      	// },
-      	// error: function(data){
-//       		
-      	// }
-      // });
+
   
   view.win.addEventListener('focus', populatePage);
   view.table.addEventListener('click', openDetail);
