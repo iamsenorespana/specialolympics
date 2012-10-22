@@ -12,18 +12,21 @@ var render = function(event) {
         }),
         
         content_view: UI.createView({
-          left: 70,
+          left: 10,
           top: 15,
           right: 10,
           layout: 'vertical'
         }),
 
-        cal_view: CalendarView(event),
+		webView: Ti.UI.createWebView({
+			url: event.weblink
+		}),
+       // cal_view: CalendarView(event),
 
         title: UI.createLabel({
           left: 0,
           color: '#667dad',
-          text: event.name,
+          text: '', //event.name,
           height: Ti.UI.SIZE,
           width: Ti.UI.SIZE,
           style_id: 'h3'
@@ -32,7 +35,7 @@ var render = function(event) {
         time: UI.createLabel({
           top: 5,
           left: 0,
-          text: DateFormatter.date(event.start_time, {to_date: true, formatted: true}),
+        //  text: DateFormatter.date(event.start_time, {to_date: true, formatted: true}),
           width: Ti.UI.SIZE,
           height: Ti.UI.SIZE,
           style_id: 'p3'
@@ -41,14 +44,14 @@ var render = function(event) {
         image: UI.createImageView({
           top: 10,
           bottom: 10,
-          image: event.pic_big,
+          image: '', //event.pic_big,
           height: 120
         }),
 
         location: UI.createLabel({
           top: 5,
           left: 0,
-          text: "@ "+event.location,
+          text: '', //"@ "+event.location,
           width: Ti.UI.SIZE,
           height: Ti.UI.SIZE,
           style_id: 'p3'
@@ -56,7 +59,7 @@ var render = function(event) {
         
         description: UI.createLabel({
           top: 5,
-          text: event.description,
+          text:'', // event.description,
           color: "black",
           width: Ti.UI.SIZE,
           height: Ti.UI.SIZE,
@@ -65,13 +68,15 @@ var render = function(event) {
         })
       };
 
-  self.view.add(self.cal_view);
-  self.content_view.add(self.title);
-  self.content_view.add(self.time);
-  self.content_view.add(self.location);
-  self.content_view.add(self.description);
-  self.content_view.add(self.image);
+ // self.view.add(self.cal_view);
+ 	self.content_view.add( self.webView );
+  //self.content_view.add(self.title);
+  //self.content_view.add(self.time);
+  //self.content_view.add(self.location);
+  //self.content_view.add(self.description);
+ // self.content_view.add(self.image);
   self.view.add(self.content_view);
+
 
   return self;
 };

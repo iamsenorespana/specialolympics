@@ -25,12 +25,16 @@ module.exports = function(view) {
       },
       
       openDetail = function(e) {
-        var detail = Detail.render(e.row.event);
-        if(isIPad) {
-          view.split_view.detailView.children.map(function(c){ view.split_view.detailView.remove(c);});
-          view.split_view.detailView.add(detail.view);
+      	if ( Ti.Platform.canOpenURL( e.row.weblink ) ){
+       	    var detail = Detail.render(e.row);
+	        if(isIPad) {
+	          view.split_view.detailView.children.map(function(c){ view.split_view.detailView.remove(c);});
+	          view.split_view.detailView.add(detail.view);
+	        } else {
+	          Application.events.open(detail.win);
+	        }
         } else {
-          Application.events.open(detail.win);
+        	alert( 'Weblink not available');
         }
       };
   

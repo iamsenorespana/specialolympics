@@ -25,7 +25,7 @@ render = function(page, left, idx, width) {
           text: page.title,
           top: 5,
           color: "#fff",
-          font: {fontWeight: 'normal'},
+          font: {fontWeight: 'bold'},
           bottom: 5,
           left: 15,
           right: 5,
