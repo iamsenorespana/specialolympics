@@ -1,0 +1,14 @@
+Welcome to the Flickr Image Module
+
+
+----------------------------------
+Usage Information
+
+var flickr=require('ti.flickr');
+flickr.authorize('<API KEY>','<Secret>');
+fl.getPublicPhotos({userId:'<NSID>'}, function(photos){
+	for(var c=0;c<photos.photo.length;c++)
+	{
+		Ti.API.info('Image URL - '+photos.photo[c].url);
+	}
+});
