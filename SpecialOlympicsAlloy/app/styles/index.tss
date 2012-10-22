@@ -1,3 +1,4 @@
+
 ".container": {
 	backgroundColor:"white"
 },
@@ -22,15 +23,40 @@
 	title :"Photos",
 	icon: "images/icons/tab_photo.png"
 },
-"#photosWin":{
-	title: 'Photos'
+"#winAboutUS" : {
+	backgroundColor : "white"
 },
-"#newsWin":{
-	title: 'News'
+"#vMenu" : {
+	top : 0,
+	height : Ti.UI.FILL,
+	width : 90,
+	left : 0
 },
-"#eventWin":{
-	title: 'Events'
+"#vA" : {
+	top : 0,
+	height : 130,
+	width : 90,
+	left: 0,
+	backgroundImage : "images/icons/menuCartN.png"
 },
-"#aboutWin":{
-	title: 'About Us'
+"#vF" : {
+	top : 130,
+	height : 130,
+	width : 90,
+	left: 0,
+	backgroundImage : "images/icons/menuSettingsN.png"
+},
+"#vM" : {
+	top : 250,
+	height : 130,
+	width : 90,
+	left: 0,
+	backgroundImage : "images/icons/menuStatusN.png"
+},
+"#vRightContainer" : {
+	top : 0,
+	left : 90,
+	height : Ti.UI.FILL,
+	width : Ti.UI.FILL,
+	backgroundColor : "white"
 }

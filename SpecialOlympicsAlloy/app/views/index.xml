@@ -2,24 +2,32 @@
 <Alloy>
 	<TabGroup>
 		<Tab id="tabAboutUS">
-			<Window id="aboutWin">
+			<Window id="winAboutUS">
+				<View id="vMenu">
+					<View id="vA" onClick="fnAboutUS">
+						<Label id="lblA" text="About US" />
+					</View>
+					<View id="vF" onClick="fnFounders">
+						<Label id="lblF" text="Founder & Leaders" />
+					</View>
+					<View id="vM" onClick="fnMission">
+						<Label id="lblM" text="Our Mission" />
+					</View>
+				</View>
+				<View id="vRightContainer">
 				
+					
+				</View>
 			</Window>
 		</Tab>
 		<Tab id="tabEvents">
-			<Window id="eventWin">
-				
-			</Window>
+			<Window></Window>
 		</Tab>
 		<Tab id="tabNews">
-			<Window id="newsWin">
-				
-			</Window>
+			<Window></Window>
 		</Tab>
 		<Tab id="tabPhotos">
-			<Window id="photosWin">
-				
-			</Window>
+			<Window></Window>
 		</Tab>
 	</TabGroup>
 </Alloy>
