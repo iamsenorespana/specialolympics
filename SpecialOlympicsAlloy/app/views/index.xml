@@ -20,10 +20,14 @@
 			</Window>
 		</Tab>
 		<Tab id="tabEvents">
-			<Window id="winEvents"></Window>
+			<Window id="winEvents">
+				<TableView id="eventTable" ></TableView>
+			</Window>
 		</Tab>
 		<Tab id="tabNews">
-			<Window id="winNews"></Window>
+			<Window id="winNews">
+				<TableView id="newsTable" ></TableView>
+			</Window>
 		</Tab>
 		<Tab id="tabPhotos">
 			<Window id="winPhotos"></Window>
