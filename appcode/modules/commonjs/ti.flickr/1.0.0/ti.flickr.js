@@ -31,6 +31,8 @@ Flickr.getPublicPhotos=function(params, onSuccess, onError){
 	     	response=response.substr(3,len-4); //Strip the Callback method supplied
 	     	if (onSuccess) {
 	     		picStream=JSON.parse(response);
+	     		
+	     		var imageSet=[];
 
 	     		for (var c=0;c<picStream.photos.photo.length;c++){
 	     			var photo=picStream.photos.photo[c];
@@ -39,11 +41,21 @@ Flickr.getPublicPhotos=function(params, onSuccess, onError){
 	     			photoUrl=photoUrl+".staticflickr.com/"+photo.server;
 	     			photoUrl=photoUrl+"/"+photo.id;
 	     			photoUrl=photoUrl+"_"+photo.secret;
-
-	     			picStream.photos.photo[c].url=photoUrl+"_z.jpg";
-	     			picStream.photos.photo[c].url_tn=photoUrl+"_m.jpg";
+	     			
+	     			var image={};
+	     			image.id=photo.id;
+	     			image.urls={
+	     				square_75: photoUrl+"_s.jpg",
+	     				thumb_100: photoUrl+"_t.jpg",
+	     				small_240: photoUrl+"_m.jpg",
+	     				medium_500: photoUrl+"_-.jpg",
+	     				medium_640: photoUrl+"_z.jpg", 
+	     				large_1024: photoUrl+"_b.jpg",
+	     				original: photoUrl+"_b.jpg",
+	     			}
+	     			imageSet.push(image);
 	     		}
-	     		onSuccess(picStream.photos);
+	     		onSuccess(imageSet);
 	     	}
 	     		
      	},
