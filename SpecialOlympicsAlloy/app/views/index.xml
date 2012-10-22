@@ -20,13 +20,13 @@
 			</Window>
 		</Tab>
 		<Tab id="tabEvents">
-			<Window></Window>
+			<Window id="winEvents"></Window>
 		</Tab>
 		<Tab id="tabNews">
-			<Window></Window>
+			<Window id="winNews"></Window>
 		</Tab>
 		<Tab id="tabPhotos">
-			<Window></Window>
+			<Window id="winPhotos"></Window>
 		</Tab>
 	</TabGroup>
 </Alloy>
