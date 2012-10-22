@@ -19,7 +19,8 @@ module.exports = function(view) {
       pullAcsInfo = function() {
         Repo.getTopBarMessageAndLogoAndDonateUrl(function(e){
           updateTopbarMessage(e.topbar_message);
-          updateLogo(url); //e.logo_url
+          //alert( e.logo_url );
+          updateLogo('images/top_logo.png'); //
           url = url; //e.donate_url;
         });
       };
