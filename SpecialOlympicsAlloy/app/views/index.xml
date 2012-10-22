@@ -1,21 +1,22 @@
+
 <Alloy>
 	<TabGroup>
-		<Tab>
+		<Tab id="tabAboutUS">
 			<Window>
 				
 			</Window>
 		</Tab>
-		<Tab>
+		<Tab id="tabEvents">
 			<Window>
 				
 			</Window>
 		</Tab>
-		<Tab>
+		<Tab id="tabNews">
 			<Window>
 				
 			</Window>
 		</Tab>
-		<Tab>
+		<Tab id="tabPhotos">
 			<Window>
 				
 			</Window>

@@ -5,4 +5,20 @@
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
 	color: "#000"
-} 
+},
+"#tabAboutUS" :{
+	title:"About Us",
+	icon: "images/icons/tab_about.png"
+},
+"#tabEvents" : {
+	title :"Events",
+	icon: "images/icons/tab_cal.png"
+}, 
+"#tabNews" : {
+	title :"News",
+	icon: "images/icons/tab_newsfeed.png"
+},
+"#tabPhotos" : {
+	title :"Photos",
+	icon: "images/icons/tab_photo.png"
+}
