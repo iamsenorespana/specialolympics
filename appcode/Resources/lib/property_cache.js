@@ -1,6 +1,6 @@
 // Caches anything in Ti Properties as json for specified time.
 module.exports = (function() {
-  var cache_time = 120000,
+  var cache_time = 1000,
   
       _currentTime = function(){
         return new Date().getTime();

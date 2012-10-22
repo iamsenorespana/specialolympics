@@ -66,8 +66,8 @@ module.exports = (function() {
       }),
       
       getPages = _apiCallFactory('pages', function(finishCall){
-        Cloud.Objects.query({classname: 'AboutUsPage', page: 1, per_page: 10}, function(e) {
-          e.success ? finishCall(e.AboutUsPage) : alert("Error getting the pages!");
+        Cloud.Objects.query({classname: 'CMS', page: 1, per_page: 10}, function(e) {
+          e.success ? finishCall(e.CMS) : alert("Error getting the pages!");
           Ti.App.fireEvent('hide_activity');
         });
       }),
