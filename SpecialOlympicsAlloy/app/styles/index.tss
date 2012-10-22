@@ -1,3 +1,4 @@
+
 ".container": {
 	backgroundColor:"white"
 },
@@ -25,6 +26,12 @@
 "#winAboutUS" : {
 	backgroundColor : "white"
 },
+"#vMenu" : {
+	top : 0,
+	height : Ti.UI.FILL,
+	width : 90,
+	left : 0
+},
 "#vA" : {
 	top : 0,
 	height : 130,
@@ -45,4 +52,11 @@
 	width : 90,
 	left: 0,
 	backgroundImage : "images/icons/menuStatusN.png"
+},
+"#vRightContainer" : {
+	top : 0,
+	left : 90,
+	height : Ti.UI.FILL,
+	width : Ti.UI.FILL,
+	backgroundColor : "white"
 }
